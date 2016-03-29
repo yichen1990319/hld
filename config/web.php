@@ -12,9 +12,7 @@ $config = [
             'cookieValidationKey' => 'hld',
             'enableCookieValidation' => false,
         ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
+        'cache' => require(__DIR__ . '/redis.php'),
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
